@@ -48,6 +48,10 @@ class Admin(db.Model):
         return '<Admin %r>' % self.admin_name
 
 
+@application.route('/')
+def hello_admin():
+    return 'Hello admin'
+
 
 #/admin_query?admin_id=xz3165&password=123
 @application.get("/admin_query")
