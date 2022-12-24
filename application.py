@@ -1,7 +1,7 @@
 from flask import Flask, render_template, session, redirect, url_for, flash, request, jsonify,Response
 import os
 from flask_sqlalchemy import SQLAlchemy
-from flask_script import Manager, Shell
+#from flask_script import Manager, Shell
 from forms import Login, SearchBookForm, ChangePasswordForm, EditInfoForm, SearchStudentForm, NewStoreForm, StoreForm, BorrowForm
 from flask_login import UserMixin, LoginManager, login_required, login_user, logout_user, current_user
 import time, datetime
@@ -11,7 +11,7 @@ import copy
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 application = Flask(__name__)
-manager = Manager(application)
+#manager = Manager(application)
 
 application.config['SECRET_KEY'] = 'hard to guess string'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:zxt13131036@localhost/cu_library_6156'
